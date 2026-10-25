@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Shopping List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>My Shopping List</h1>
+      <p>Add items, mark them as purchased, or remove them.</p>
+
+      <form id="shopping-form">
+        <label for="item-input">Shopping item</label>
+        <div class="input-group">
+          <input
+            type="text"
+            id="item-input"
+            placeholder="e.g. Milk"
+            required
+            maxlength="80"
+          />
+          <button type="submit">Add Item</button>
+        </div>
+      </form>
+
+      <p id="list-message" aria-live="polite">Your list is empty.</p>
+
+      <ul id="shopping-list"></ul>
+
+      <button type="button" id="clear-button" class="clear-button">
+        Clear List
+      </button>
+    </main>
+  </body>
+</html>
