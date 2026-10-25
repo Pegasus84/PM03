@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Data from an API</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Display Data from an API</h1>
+      <p>Retrieve and display sample user information from a public API.</p>
+
+      <div class="button-group">
+        <button id="load-button" type="button">Load User Data</button>
+        <button id="error-button" type="button" class="secondary">
+          Test Error Handling
+        </button>
+      </div>
+
+      <p id="status-message" role="status" aria-live="polite">
+        Click "Load User Data" to retrieve information.
+      </p>
+
+      <section id="user-card" class="user-card" hidden>
+        <h2 id="user-name"></h2>
+        <p><strong>Username:</strong> <span id="user-username"></span></p>
+        <p><strong>Email:</strong> <span id="user-email"></span></p>
+        <p><strong>City:</strong> <span id="user-city"></span></p>
+        <p><strong>Company:</strong> <span id="user-company"></span></p>
+      </section>
+    </main>
+  </body>
+</html>
