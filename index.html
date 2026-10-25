@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issue Submission Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="form-card">
+        <p class="eyebrow">SUPPORT CENTRE</p>
+        <h1>Submit an Issue</h1>
+        <p class="intro">
+          Tell us what happened and our team will look into it.
+        </p>
+
+        <form id="issueForm" novalidate>
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" required />
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="field">
+            <label for="department">Department *</label>
+            <select id="department" required>
+              <option value="">Select a department</option>
+              <option value="Accounts">Accounts</option>
+              <option value="Customer Support">Customer Support</option>
+              <option value="IT">IT</option>
+              <option value="Operations">Operations</option>
+              <option value="Sales">Sales</option>
+              <option value="Other">Other</option>
+            </select>
+            <small class="error" id="departmentError"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="you@example.com"
+              required
+            />
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="field">
+            <label for="category">Issue category *</label>
+            <select id="category" required>
+              <option value="">Select an issue category</option>
+              <option value="Bug">Bug / Defect</option>
+              <option value="Access">Access / Login</option>
+              <option value="Data">Incorrect Data</option>
+              <option value="Performance">Performance</option>
+              <option value="Other">Other</option>
+            </select>
+            <small class="error" id="categoryError"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Describe the issue *</label>
+            <textarea
+              id="message"
+              rows="5"
+              maxlength="501"
+              placeholder="Describe what happened..."
+              required
+            ></textarea>
+            <small class="hint">Maximum 500 characters.</small>
+            <small class="error" id="messageError"></small>
+          </div>
+
+          <div
+            id="formMessage"
+            class="form-message"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+          <button type="submit">Submit issue</button>
+
+          <p class="required-note">* Required fields</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
